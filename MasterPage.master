@@ -1,0 +1,356 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Unique Garden</title>
+    
+    <link href="assets/images/unique-garden-logo.jpg" rel="shortcut icon" type="image/png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Experience the Unique Garden Resort at Jagdeo Path, Bailey Road, Patna, Bihar, India. Enjoy luxurious accommodations amidst beautiful gardens, top-notch amenities, and exceptional service. Our resort offers a serene retreat with modern facilities, including elegant rooms, a fine dining restaurant, a spa, and event spaces. Perfect for family vacations, romantic getaways, and business meetings. Discover a haven of tranquility and luxury at our unique garden resort in Patna. Book your stay today for an unforgettable experience.">
+
+
+
+<meta name="keywords" content="unique garden resort Patna, Jagdeo Path, Bailey Road, Patna, Bihar, luxury resort Patna, best garden resort Patna, family resort Patna, romantic getaway Patna, business meetings Patna, serene retreat Patna, modern amenities resort Patna, Patna accommodation, Patna hotel, Patna spa, fine dining Patna, Patna event spaces, top resort Bihar, beautiful gardens Patna, Patna vacation, Patna travel, unique stay Patna">
+
+
+
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Mobile Web-app fullscreen -->
+    <meta name="manya-premier-resort" content="yes">
+    <meta name="manya-premier-resort" content="yes">
+
+    <!-- Meta tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS styles-->
+    <link rel="stylesheet" media="all" href="css/bundle.min.css" />
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+   
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<!--Get your own code at fontawesome.com-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4638549725433695" crossorigin="anonymous"></script><script src="//www.p2hp.com/tj.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+              .whatsapp {
+            width:80%;
+            position:fixed;
+            /*font-size:5rem;*/
+            right:0;
+            left:95%;
+            /*top:95%;*/
+            bottom:0;
+            z-index:1;
+            /*padding-left:7%;*/
+            /*border:2px solid red;*/
+        }
+            .whatsapp img {
+                width:3%;
+                height:3%;
+            }
+            @media only screen and (max-width: 400px) {
+                .whatsapp img {
+                    /*border:2px solid red;*/
+                /*margin-top:-2%;*/
+                margin-left:-30%;
+                 
+                }
+             .whatsapp img {
+                 
+                width:15%;
+                height:15%;
+            }
+}
+    </style>
+</head>
+<body>
+    <%--<form id="form1" runat="server">--%>
+        <div>
+            <!--HEADER SECTION-->
+
+        <header>
+
+            <div class="inc:_header.html" style="background-color:white;">
+                <!-- ==================  Navigation (main menu) ================== -->
+                <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+                <script type="text/javascript">
+                    $(function () {
+
+                        // Toggle menu
+                        // ------------------------------------
+
+                        $('.toggle-menu').on('click', function () {
+                            $(this).toggleClass('open');
+                            $(this).parent().find('.navigation-block').toggleClass('open');
+                        });
+
+                        var $box = $('.options-content .options .box');
+                        $box.click(function () {
+                            var $this = $(this),
+                                $boxWrapper = $this.closest('.box-wrapper');
+
+                            if ($this.hasClass('active')) {
+                                $boxWrapper.removeClass('box-wrapper-selected');
+                                $this.removeClass('active');
+                            }
+                            else {
+                                $boxWrapper.addClass('box-wrapper-selected');
+                                $this.closest('.options-content').find('.box').removeClass('active');
+                                $this.addClass('active');
+                            }
+                        });
+
+                        // Mobile - Dropdown menu
+                        // ------------------------------------
+
+                        $('.open-dropdown').on('click', function (e) {
+
+                            //e.preventDefault();
+
+                            if ($(document).width() >= 992) {
+                                return false;
+                            }
+
+                            var $this = $(this),
+                                $li = $this.closest('li'),
+                                $drop = $li.find('ul');
+
+                            $li.toggleClass('expanded');
+
+                            if ($li.hasClass('expanded')) {
+                                $drop.slideDown();
+                            }
+                            else {
+                                $drop.slideUp();
+                            }
+                        });
+
+                        // Desktop - Dropdown menu
+                        //---------------------------
+
+                        $('.navigation-block > ul > li').bind({
+                            mouseenter: function () {
+                                if ($(document).width() < 992) {
+                                    return false;
+                                }
+                                $(this).addClass('hovered');
+                            },
+                            mouseleave: function () {
+                                if ($(document).width() < 992) {
+                                    return false;
+                                }
+                                $(this).removeClass('hovered').removeAttr('class');
+                            },
+                        });
+
+                    });
+                </script>
+
+                <!-- ======================== Navigation ======================== -->
+
+                <div class="container">
+                     <a href="https://wa.me/+917488141166?text=Please%20let%20me%20know%20more%20about%20your%20products%20and%20services!!" target="_blank">
+        <div class="whatsapp">
+            <img src="assets/images/WhatsApp.png" alt="WhatsApp Logo" />
+        </div>
+    </a>
+                    <!-- === navigation-top === -->
+
+                    <nav class="navigation-top clearfix">
+
+                        <!-- navigation-top-left -->
+
+                        <div class="navigation-top-left">
+                            <a class="box" href="Adminlogin.aspx">
+                            <i class='fas fa-user-tie fs-3' title="Admin login"></i>
+                                </a>
+                            <a class="box" href="https://www.facebook.com/people/Unique-Garden-Banquet-Hall/pfbid0225Jn3DEzhQyJnEdzfcQxsa6d14o3mHTjzpF7jofr5TVEMnQZ976Gu41tMhjHjkqxl/">
+                                <i class="fab fa-facebook fs-3" title="facebook" style="color:#2AA4F4;"></i>
+                            </a>
+                            <a class="box" href="#">
+                                <i class="fab fa-twitter fs-3" title="twitter" style="color:#03A9F4;"></i>
+                            </a>
+                            <a class="box" href="#">
+                                <%--<i class="fab fa-youtube fs-3" ></i>--%>
+                                <i class="fa fa-youtube-play fs-3" style="font-size:48px;color:red"title="youtube"></i>
+                            </a>
+                        </div>
+
+                        
+
+                        <!-- navigation-top-right -->
+
+                        <div class="navigation-top-right">
+                            
+                            <a class="box" href="tel:+91 9973931009, 06124141611, 9121582737">
+                                <i class="fa fa-phone-alt fs-3" style="color:#1A9BA1"></i><span class="fs-3"> +91 9973931009, 06124141611, 9121582737</span>
+                                
+                            </a>
+                        </div>
+                    </nav>
+
+                    <!-- === navigation-main === -->
+
+                    <nav class="navigation-main clearfix">
+
+                        <!-- logo -->
+                        
+                         <div class="logo animated fadeIn">
+                            <a href="Default.aspx">
+                                <img class="logo-desktop" src="assets/images/unique-garden-logo.png" alt="logo">
+                                <img class="logo-mobile" src="assets/images/moblogo.png" alt="moblogo Text">
+                            </a>
+                        </div>
+
+                        <div class="toggle-menu"><i class="icon icon-menu" style="color: black; font-size: 2rem; font-weight: bold;"></i></div>
+                        <!-- toggle-menu -->
+
+                      
+
+                        <!-- navigation-block -->
+
+                        <div class="navigation-block clearfix" >
+
+                            <!-- navigation-left -->
+
+
+                            <ul class="navigation-left">
+                                <li>
+                                    <a href="Default.aspx">Home </a>
+                                </li>
+                                <li>
+                                    <a href="Aboutus.aspx">About Us </a>
+                                </li>
+                                <li>
+                                    <a href="Services.aspx">Services </a>
+                                </li>
+                                <li>
+                                    <a href="Banquets.aspx">Banquets</a>
+                                </li>
+                            </ul>
+
+                            <!-- navigation-right -->
+                            
+                            <ul class="navigation-right">
+                                <li>
+                                    <a href="Gallery.aspx">Gallery </a>
+                                </li>
+                                <li>
+                                    <a href="Video.aspx">Video</a>
+                                </li>
+                                <li>
+                                    <a href="Testimonial.aspx">Testimonials</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Reach Us <span class="open-dropdown"><i class="fa-solid fa-circle-chevron-down"></i></span></a>
+                                    <ul>
+                                        <li><a href="Feedback.aspx" >Feedback</a></li>
+                                        <li><a href="Contact.aspx">Contact</a></li>
+                                        <li><a href="Career.aspx">Career</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+
+                        </div> <!--/navigation-block-->
+
+                    </nav>
+                </div> <!--/container-->
+            </div>
+
+        </header>
+
+        <!--HEADER SECTION-->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!--footer section-->
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <h3>Useful Links</h3>
+                                <hr />
+                                <p><a href="Default.aspx">Home</a></p>
+                                <p><a href="AboutUs.aspx">About Us</a></p>
+                                <p><a href="Services.aspx">Services</a></p>
+                                <p><a href="Banquets.aspx">Banquet</a></p>
+                                <p><a href="Gallery.aspx">Gallery</a></p>
+                                <p><a href="Testimonial.aspx">Testimonial</a></p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                 <h3>Location Map</h3>
+                                <hr />
+                                 <%--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5234724555194!2d85.04345591541865!3d25.620746383701004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5731d1d69461%3A0x3362f43e4f64fb9e!2sCafe%20Hideout!5e0!3m2!1sen!2sin!4v1671269652348!5m2!1sen!2sin" style="border:none; width:95%;height:200px;margin-left:2.5%;margin-right:2.5%;margin-top:20px;border:2px solid #29bfc6;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>--%>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14391.928778795684!2d85.0714725!3d25.6055079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57b2f2f32c3f%3A0xecf92aa4d2e99821!2sUnique%20Garden!5e0!3m2!1sen!2sin!4v1720158289946!5m2!1sen!2sin" style="border:none; width:95%;height:200px;margin-left:2.5%;margin-right:2.5%;margin-top:20px;border:2px solid #29bfc6;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <h3>Get in Touch</h3>
+                                <hr />
+                                <p><i class='fas fa-map-marker-alt' style='font-size:24px;color:#98CCFD;'></i>&emsp;<span>Pillar No.1 , Jagdeo Path, Bailey Road, <br /> Opp. Indian Oil Petrol Pump,patna - 800014</span></p>
+                                <br />
+                                <p><i class='fas fa-phone-alt' style='font-size:24px;color:#009688;'></i>&emsp;<span> +91 9973931009, 06124141611, 9121582737</span></p>
+                                <br />
+                                <p><i class='fas fa-envelope' style='font-size:24px;color:#12D9E3;'></i>&emsp;<span><a href="mailto:uniquegarden@gmail.com" style="visibility:visible;">uniquegarden@gmail.com</a></span></p>
+                                
+                            </div>
+                        </div>
+                    
+                    <div class="footer-social">
+                            <div class="col-sm-12 icons text-center">
+                                <a href="Default.aspx" class="footer-logo">  <img src="assets/images/f-logo.png"  alt="Alternate Text" ></a>
+                                <br />
+                                
+                                <br />
+                                <ul>
+                                    <li><a href="https://www.facebook.com/people/Unique-Garden-Banquet-Hall/pfbid0225Jn3DEzhQyJnEdzfcQxsa6d14o3mHTjzpF7jofr5TVEMnQZ976Gu41tMhjHjkqxl/"><i class="fab fa-facebook" title="facebook" style="color:#2AA4F4;"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter" title="twitter" style="color:#03A9F4;"></i></a></li>
+                                    <li><a href="www.uniquegarden.co.in"><i class="fab fa-google-plus" title="google-plus" style="color:#F44F5A;"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube" title="youtube" style="color:red;"></i></a></li>
+                                    <li><a href="https://www.instagram.com/unique_garden_patna/"><i class="fab fa-instagram" title="instagram" style="background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7)"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 copyright">
+                                <small>Copyright © 2024 &nbsp; | &nbsp; <a href="#">www.uniquegarden.co.in</a></small>
+                                <br />
+                                <a href="https://webnettechnologies.in/">Designed and Developed by: Webnet Technologies</a>
+                            </div>
+                            
+                        </div>
+                    
+                </div>
+            </footer>
+
+
+            <!--footer section-->
+    </div>
+    <%--</form>--%>
+        
+            
+    <script src="js/bundle.min.js"></script>
+</body>
+</html>
+
